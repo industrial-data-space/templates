@@ -1,6 +1,19 @@
 [
   {
     "type": "container",
+    "title": "IDS REST Server Example",
+    "description": "The most simple example REST server",
+    "note": "This is an example node app that accepts temperature values via HOST POST and displays the received values. <br> Values are received at POST: <hostname>:8081/temp and are displayed at GET: <hostname>:8081/",
+    "categories": ["webserver","industrialdataspace","example"],
+    "platform": "linux",
+    "logo": "https://avatars2.githubusercontent.com/u/29960318?s=200&v=4",
+    "image": "fraunhoferaisec/example-server:latest",
+    "ports": [
+      "8081/tcp"
+    ]
+  },
+  {
+    "type": "container",
     "title": "Registry",
     "description": "Docker image registry",
     "categories": ["docker"],
