@@ -328,6 +328,35 @@
   },
   {
     "type": "container",
+    "title": "ActiveMQ",
+    "description": "ActivMQ enterprise messaging system",
+    "categories": ["messaging"],
+    "platform": "linux",
+    "logo": "https://activemq.apache.org/artemis/docs/latest/images/artemis-logo.png",
+    "image": "webcenter/activemq:5.15.2",
+    "ports": [
+      "8161/tcp",
+      "61616/tcp",
+      "5672/tcp",
+      "61613/tcp",
+      "1883/tcp",
+      "61614/tcp"
+    ],
+    "volumes": ["/data"],
+    "env": [
+      {
+        "name": "ACTIVEMQ_CONFIG_MINMEMORY",
+        "set": "512"
+      },
+      {
+        "name": "ACTIVEMQ_CONFIG_MAXMEMORY",
+        "label": "2048"
+      }
+    ]
+
+  },
+  {
+    "type": "container",
     "title": "Sematext Docker Agent",
     "description": "Collect logs, metrics and docker events",
     "categories": ["Log Management", "Monitoring"],
