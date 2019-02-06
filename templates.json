@@ -14,6 +14,20 @@
   },
   {
     "type": "container",
+    "title": "TrackChain Server",
+    "description": "Supply Chain Tracking via ABE encrypted Multichain",
+    "categories": ["blockchain","industrialdataspace"],
+    "platform": "linux",
+    "note": "This server receives supply chain events, encrypts them with ABE and commits them to TrackChain",
+    "logo": "https://raw.githubusercontent.com/industrial-data-space/templates/master/icons/trackchain.png",
+    "image": "fraunhoferaisec/trackchain",
+    "ports": [
+      "8000/tcp", "8001/tcp", "8002/tcp", "27017/tcp"
+    ],
+    "volumes": ["/data/db"]
+  },
+  {
+    "type": "container",
     "title": "Registry",
     "description": "Docker image registry",
     "categories": ["docker"],
@@ -395,110 +409,5 @@
       "55413/tcp", "55414/tcp", "55415/tcp", "35622/tcp"
     ],
     "volumes": ["/var/urbackup"]
-  },
-  {
-    "type": "stack",
-    "title": "Portainer Agent",
-    "description": "Manage all the resources in your Swarm cluster",
-    "note": "The agent will be deployed globally inside your cluster and available on port 9001.",
-    "categories": ["portainer"],
-    "platform": "linux",
-    "logo": "https://portainer.io/images/logos/portainer.png",
-    "repository": {
-      "url": "https://github.com/portainer/templates",
-      "stackfile": "stacks/portainer-agent/docker-stack.yml"
-    }
-  },
-  {
-    "type": "stack",
-    "title": "OpenFaaS",
-    "name": "func",
-    "description": "Serverless functions made simple",
-    "note": "Deploys the API gateway and sample functions. You can access the UI on port 8080. <b>Warning</b>: the name of the stack must be 'func'.",
-    "categories": ["serverless"],
-    "platform": "linux",
-    "logo": "https://portainer.io/images/logos/openfaas.png",
-    "repository": {
-      "url": "https://github.com/openfaas/faas",
-      "stackfile": "docker-compose.yml"
-    }
-  },
-  {
-    "type": "stack",
-    "title": "IronFunctions",
-    "description": "Open-source serverless computing platform",
-    "note": "Deploys the IronFunctions API and UI.",
-    "categories": ["serverless"],
-    "platform": "linux",
-    "logo": "https://portainer.io/images/logos/ironfunctions.png",
-    "repository": {
-      "url": "https://github.com/portainer/templates",
-      "stackfile": "stacks/ironfunctions/docker-stack.yml"
-    }
-  },
-  {
-    "type": "stack",
-    "title": "CockroachDB",
-    "description": "CockroachDB cluster",
-    "note": "Deploys an insecure CockroachDB cluster, please refer to <a href=\"https://www.cockroachlabs.com/docs/stable/orchestrate-cockroachdb-with-docker-swarm.html\" target=\"_blank\">CockroachDB documentation</a> for production deployments.",
-    "categories": ["database"],
-    "platform": "linux",
-    "logo": "https://portainer.io/images/logos/cockroachdb.png",
-    "repository": {
-      "url": "https://github.com/portainer/templates",
-      "stackfile": "stacks/cockroachdb/docker-stack.yml"
-    }
-  },
-  {
-    "type": "stack",
-    "title": "Microsoft OMS Agent",
-    "description": "Microsoft Operations Management Suite Linux agent.",
-    "categories": ["OPS"],
-    "platform": "linux",
-    "logo": "https://portainer.io/images/logos/microsoft.png",
-    "repository": {
-      "url": "https://github.com/portainer/templates",
-      "stackfile": "stacks/microsoft-oms/docker-stack.yml"
-    },
-    "env": [
-      {
-        "name": "AZURE_WORKSPACE_ID",
-        "label": "Workspace ID",
-        "description": "Azure Workspace ID"
-      },
-      {
-        "name": "AZURE_PRIMARY_KEY",
-        "label": "Primary key",
-        "description": "Azure primary key"
-      }
-    ]
-  },
-  {
-    "title": "Sematext Docker Agent",
-    "type": "stack",
-    "categories": ["Log Management", "Monitoring"],
-    "description": "Collect logs, metrics and docker events",
-    "logo": "https://portainer.io/images/logos/sematext_agent.png",
-    "platform": "linux",
-    "repository": {
-      "url": "https://github.com/portainer/templates",
-      "stackfile": "stacks/sematext-agent-docker/docker-stack.yml"
-    },
-    "env": [
-      {
-        "name": "LOGSENE_TOKEN",
-        "label": "Logs token"
-      },
-      {
-        "name": "SPM_TOKEN",
-        "label": "SPM monitoring token"
-      }
-    ],
-    "volumes": [
-      {
-        "container": "/var/run/docker.sock",
-        "bind": "/var/run/docker.sock"
-      }
-    ]
   }
 ]
