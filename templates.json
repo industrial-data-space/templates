@@ -28,59 +28,6 @@
   },
   {
     "type": "container",
-    "title": "Registry",
-    "description": "Docker image registry",
-    "categories": ["docker"],
-    "platform": "linux",
-    "logo": "https://portainer.io/images/logos/registry.png",
-    "image": "registry:latest",
-    "ports": [
-      "5000/tcp"
-    ],
-    "volumes": ["/var/lib/registry"]
-  },
-  {
-    "type": "container",
-    "title": "Nginx",
-    "description": "High performance web server",
-    "categories": ["webserver"],
-    "platform": "linux",
-    "logo": "https://portainer.io/images/logos/nginx.png",
-    "image": "nginx:latest",
-    "ports": [
-      "80/tcp",
-      "443/tcp"
-    ],
-    "volumes": ["/etc/nginx", "/usr/share/nginx/html"]
-  },
-  {
-    "type": "container",
-    "title": "Httpd",
-    "description": "Open-source HTTP server",
-    "categories": ["webserver"],
-    "platform": "linux",
-    "logo": "https://portainer.io/images/logos/httpd.png",
-    "image": "httpd:latest",
-    "ports": [
-      "80/tcp"
-    ],
-    "volumes": ["/usr/local/apache2/htdocs/"]
-  },
-  {
-    "type": "container",
-    "title": "Caddy",
-    "description": "HTTP/2 web server with automatic HTTPS",
-    "categories": ["webserver"],
-    "platform": "linux",
-    "logo": "https://portainer.io/images/logos/caddy.png",
-    "image": "abiosoft/caddy:latest",
-    "ports": [
-      "80/tcp", "443/tcp", "2015/tcp"
-    ],
-    "volumes": ["/root/.caddy"]
-  },
-  {
-    "type": "container",
     "title": "MySQL",
     "description": "The most popular open-source database",
     "categories": ["database"],
@@ -123,7 +70,7 @@
     "description": "The most advanced open-source database",
     "categories": ["database"],
     "platform": "linux",
-    "logo": "https://portainer.io/images/logos/postgres.png",
+    "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/postgres.png",
     "image": "postgres:latest",
     "env": [
       {
@@ -146,7 +93,7 @@
     "description": "Open-source document-oriented database",
     "categories": ["database"],
     "platform": "linux",
-    "logo": "https://portainer.io/images/logos/mongo.png",
+    "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mongo.png",
     "image": "mongo:latest",
     "ports": [
       "27017/tcp"
@@ -159,7 +106,7 @@
     "description": "An open-source, survivable, strongly consistent, scale-out SQL database",
     "categories": ["database"],
     "platform": "linux",
-    "logo": "https://portainer.io/images/logos/cockroachdb.png",
+    "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/cockroachdb.png",
     "image": "cockroachdb/cockroach:latest",
     "ports": [
       "26257/tcp",
@@ -174,7 +121,7 @@
     "description": "An open-source distributed SQL database",
     "categories": ["database"],
     "platform": "linux",
-    "logo": "https://portainer.io/images/logos/cratedb.png",
+    "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/cratedb.png",
     "image": "crate:latest",
     "ports": [
       "4200/tcp",
@@ -188,7 +135,7 @@
     "description": "Open-source search and analytics engine",
     "categories": ["database"],
     "platform": "linux",
-    "logo": "https://portainer.io/images/logos/elasticsearch.png",
+    "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/elasticsearch.png",
     "image": "elasticsearch:latest",
     "ports": [
       "9200/tcp",
@@ -202,7 +149,7 @@
     "description": "A distributed object storage server built for cloud applications and devops",
     "categories": ["storage"],
     "platform": "linux",
-    "logo": "https://portainer.io/images/logos/minio.png",
+    "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/minio.png",
     "image": "minio/minio:latest",
     "ports": [
       "9000/tcp"
@@ -226,7 +173,7 @@
     "description": "Standalone AWS S3 protocol server",
     "categories": ["storage"],
     "platform": "linux",
-    "logo": "https://portainer.io/images/logos/scality-s3.png",
+    "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/scality-s3.png",
     "image": "scality/s3server",
     "ports": [
       "8000/tcp"
@@ -250,7 +197,7 @@
     "categories": ["database"],
     "platform": "linux",
     "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
-    "logo": "https://portainer.io/images/logos/microsoft.png",
+    "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
     "image": "microsoft/mssql-server-linux:2017-GA",
     "ports": [
       "1433/tcp"
@@ -272,7 +219,7 @@
     "description": "Open-source serverless computing platform",
     "categories": ["serverless"],
     "platform": "linux",
-    "logo": "https://portainer.io/images/logos/ironfunctions.png",
+    "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ironfunctions.png",
     "image": "iron/functions:latest",
     "ports": [
       "8080/tcp"
@@ -286,7 +233,7 @@
     "description": "Open-source user interface for IronFunctions",
     "categories": ["serverless"],
     "platform": "linux",
-    "logo": "https://portainer.io/images/logos/ironfunctions.png",
+    "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ironfunctions.png",
     "image": "iron/functions-ui:latest",
     "ports": [
       "4000/tcp"
@@ -306,7 +253,7 @@
     "description": "Open-source enterprise search platform",
     "categories": ["search-engine"],
     "platform": "linux",
-    "logo": "https://portainer.io/images/logos/solr.png",
+    "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/solr.png",
     "image": "solr:latest",
     "ports": [
       "8983/tcp"
@@ -319,7 +266,7 @@
     "description": "Open-source in-memory data structure store",
     "categories": ["database"],
     "platform": "linux",
-    "logo": "https://portainer.io/images/logos/redis.png",
+    "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redis.png",
     "image": "redis:latest",
     "ports": [
       "6379/tcp"
@@ -332,7 +279,7 @@
     "description": "Highly reliable enterprise messaging system",
     "categories": ["messaging"],
     "platform": "linux",
-    "logo": "https://portainer.io/images/logos/rabbitmq.png",
+    "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/rabbitmq.png",
     "image": "rabbitmq:latest",
     "ports": [
       "5671/tcp",
@@ -375,7 +322,7 @@
     "description": "Collect logs, metrics and docker events",
     "categories": ["Log Management", "Monitoring"],
     "platform": "linux",
-    "logo": "https://portainer.io/images/logos/sematext_agent.png",
+    "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/sematext_agent.png",
     "image": "sematext/sematext-agent-docker:latest",
     "name": "sematext-agent",
     "privileged": true,
@@ -403,7 +350,7 @@
     "categories": ["backup"],
     "platform": "linux",
     "note": "This application web interface is exposed on the port 55414 inside the container.",
-    "logo": "https://portainer.io/images/logos/urbackup.png",
+    "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/urbackup.png",
     "image": "cfstras/urbackup",
     "ports": [
       "55413/tcp", "55414/tcp", "55415/tcp", "35622/tcp"
