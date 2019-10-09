@@ -28,6 +28,20 @@
   },
   {
     "type": "container",
+    "title": "Mosquitto MQTT Server",
+    "description": "Eclipse MQTT Server",
+    "note": "Industry-standard open source MQTT server by the Eclipse Foundation",
+    "categories": ["mqtt","industrialdataspace","example"],
+    "platform": "linux",
+    "logo": "https://raw.githubusercontent.com/docker-library/docs/757578e3a44e5460a8a11d32a81776f8b74231a9/eclipse-mosquitto/logo.png",
+    "image": "eclipse-mosquitto:latest",
+    "ports": [
+      "1883/tcp",
+      "9001/tcp"
+    ]
+  },
+  {
+    "type": "container",
     "title": "MySQL",
     "description": "The most popular open-source database",
     "categories": ["database"],
