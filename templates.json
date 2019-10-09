@@ -32,7 +32,7 @@
     "description": "The most popular open-source database",
     "categories": ["database"],
     "platform": "linux",
-    "logo": "https://portainer.io/images/logos/mysql.png",
+    "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mysql.png",
     "image": "mysql:latest",
     "env": [
       {
@@ -51,7 +51,7 @@
     "description": "Performance beyond MySQL",
     "categories": ["database"],
     "platform": "linux",
-    "logo": "https://portainer.io/images/logos/mariadb.png",
+    "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mariadb.png",
     "image": "mariadb:latest",
     "env": [
       {
