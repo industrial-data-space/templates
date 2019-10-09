@@ -36,8 +36,7 @@
     "logo": "https://raw.githubusercontent.com/docker-library/docs/757578e3a44e5460a8a11d32a81776f8b74231a9/eclipse-mosquitto/logo.png",
     "image": "eclipse-mosquitto:latest",
     "ports": [
-      "1883/tcp",
-      "9001/tcp"
+      "1883/tcp", "9001/tcp"
     ]
   },
   {
