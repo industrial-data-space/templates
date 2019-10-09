@@ -14,6 +14,19 @@
   },
   {
     "type": "container",
+    "title": "IDS Data Provider Example",
+    "description": "The most simple data provider",
+    "note": "This is an example data provider subscribing to MQTT and forwarding events via IDSCP",
+    "categories": ["webserver","industrialdataspace","example"],
+    "platform": "linux",
+    "logo": "https://avatars2.githubusercontent.com/u/29960318?s=200&v=4",
+    "image": "fraunhoferaisec/example-client:latest",
+    "ports": [
+      "8081/tcp"
+    ]
+  },
+  {
+    "type": "container",
     "title": "TrackChain Server",
     "description": "Supply Chain Tracking via ABE encrypted Multichain",
     "categories": ["blockchain","industrialdataspace"],
